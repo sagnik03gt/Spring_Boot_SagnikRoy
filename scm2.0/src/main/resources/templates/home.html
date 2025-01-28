@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>home</title>
+    <link rel="stylesheet" th:href="@{'/css/output.css'}" />
+    <style>
+      .container {
+        height: auto;
+        width: 50%;
+        padding: 30px;
+        margin: auto;
+        background: #e2e2e2;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bg-gray-200 w-1/2 p-4 mx-auto mt-5 text-2xl">
+      <h1 th:text="${name}" class="font-bold">This is home page</h1>
+      <p th:text="${age}" class="text-xl text-gray-700">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae quaerat
+        sint animi eum alias facere fuga labore officia pariatur debitis!
+      </p>
+    </div>
+  </body>
+</html>
