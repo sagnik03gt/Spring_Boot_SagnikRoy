@@ -1,6 +1,7 @@
 package com.example.db_practice_tcs;
 
 
+import Model.Emp_tcs;
 import Repo.Emp_tcsRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -19,8 +20,7 @@ public class Controller {
     public String func(){
         return "This is my page";
     }
-    @PostMapping("/add")
-    public ResponseEntity<?> addUser(@RequestParam String name,@RequestParam int age){
+//
+    Emp_tcs e1 = new Emp_tcs();
 
-    }
 }

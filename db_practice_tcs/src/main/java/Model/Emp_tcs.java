@@ -13,9 +13,24 @@ public class Emp_tcs {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(name = "Name", unique = false)
+//    @Column(name = "Name", unique = false)
     private String name;
 
-    @Column(name = "Age",unique = false)
+//    @Column(name = "Age",unique = false)
     private Integer age;
+
+    public String getName(){
+        return name;
+    }
+    public int getAge(){
+        return age;
+    }
+    public void setName(String name){
+        this.name=name;
+    }
+    public void setAge(int age){
+        this.age=age;
+    }
+
+
 }
