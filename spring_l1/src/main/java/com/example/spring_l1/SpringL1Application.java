@@ -1,15 +1,12 @@
 package com.example.spring_l1;
 
 import com.example.spring_l1.model.User;
-import com.example.spring_l1.repo.userRepo;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.example.spring_l1.repo.UserRepo;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 @SpringBootApplication
 public class SpringL1Application {
@@ -21,8 +18,9 @@ public class SpringL1Application {
 	public static void main(String[] args) {
 		ApplicationContext context = SpringApplication.run(SpringL1Application.class, args);
 
+
 		// Get the userRepo bean from the context
-		userRepo user = context.getBean(userRepo.class);
+		UserRepo user = context.getBean(UserRepo.class);
 
 		// Create and save a user
 //		User u1 = new User();
@@ -50,7 +48,6 @@ public class SpringL1Application {
 //
 //			user.save(upUser);
 //			System.out.println("updated");
-//		}
 
 //		Optional<User> deleteUser = user.findById(3);
 //		if(deleteUser.isPresent()){
@@ -60,12 +57,27 @@ public class SpringL1Application {
 //			System.out.println(ux+" Deleted");
 //
 //		}
-		List<User> users = user.findByName("Kushal");
+		//custom method
+
+//		List<User> users = user.findByName("Kushal");
+//		users.forEach(e->System.out.println(e));
+
+		User u1 = user.findByPersonalName("Kushal");
+		System.out.println(u1);
+
+		System.out.println("_______________________________");
+
+		List<User> users = user.findByAge(25);
 		users.forEach(e->System.out.println(e));
 
+		System.out.println("_______________________________");
+
+		user.getUsers().forEach(e->System.out.println(e));
+		}
 
 
-	}
+
+
 
 
 
